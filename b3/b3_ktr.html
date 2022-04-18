@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="" id="value-input">
+<button onclick="clickMe()">Click me</button>
+</body>
+</html>
+<script>
+    // let a;
+    // a=3;
+    // function ktnt(a){
+    //     if(a<2){
+    //         return 0;
+    //     }
+    //     else{
+    //         for(let i=2;i<=Math.sqrt(a);a++){
+    //             if(a%i===0){
+    //                 break;
+    //             }
+    //         }
+    //         return 0;
+    //     }
+    //     return 1;
+    // }
+    function clickMe(){
+        let inputValue = document.getElementById("value-input").value;
+        if(inputValue%2===0){
+            alert("Gia tri ban vua nhap la so chan")
+        }
+        else{
+            let ktr=true;
+            if(inputValue<2){
+               alert(inputValue+ " k la so nguyen to")
+            }
+            else{
+                for(let i =2;i<=Math.sqrt(inputValue);i++){
+                    if(inputValue%i===0){
+                       ktr= false;
+                       break;
+                    }
+                }
+                if(ktr){
+                    alert(inputValue+"  la so nguyen to")
+                }
+                else{
+                    alert(inputValue+" k  la so nguyen to ")
+                }
+            }
+        }
+    }
+</script>

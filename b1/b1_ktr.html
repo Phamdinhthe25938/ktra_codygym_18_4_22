@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <h2>Bai 1</h2>
+     <p>Cau a</p>
+     <input type="text" name="" id="valueA_a" value="" placeholder="nhap a">
+     <button onclick="cauA()">Cau A</button>
+     <p id="dispalyA"></p>
+     <p>Cau b</p>
+     <input type="text" name="" id="valueA_b" value="" placeholder="nhap a">
+     <input type="text" name="" id="valueB_b" value="" placeholder="nhap b">
+     <button onclick="cauB()">Cau B</button>
+     <p id="displayB"></p>
+     <p>Cau c</p>
+     <input type="text" name="" id="valueA_c" value="" placeholder="nhap a">
+     <input type="text" name="" id="valueB_c" value="" placeholder="nhap b">
+     <button onclick="cauC()">Cau c</button>
+     <p id="displayC"></p>
+     <p>Cau d</p>
+     <input type="text" name="" id="valueA_d" value="" placeholder="Nhập năm ">
+     <button onclick="cauD()">Cau D</button>
+     <p id="dispalyD"></p>
+     <p>Cau e</p>
+     <input type="text" name="" id="valueA_e" value="" placeholder="nhap a">
+     <input type="text" name="" id="valueB_e" value="" placeholder="nhap b">
+     <input type="text" name="" id="valueC_e" value="" placeholder="nhap c">
+     <button onclick="cauE()">Cau c</button>
+     <p id="displayE"></p>
+     <p>Cau f</p>
+     <input type="text" name="" id="valueA_f" value="" placeholder="nhap a">
+     <input type="text" name="" id="valueB_f" value="" placeholder="nhap b">
+     <input type="text" name="" id="valueC_f" value="" placeholder="nhap c">
+     <button onclick="cauF()">Cau c</button>
+     <p id="displayF"></p>
+</body>
+</html>
+<script>
+    function cauA(){
+        let a = parseInt(document.getElementById("valueA_a").value);
+        let cv;
+        let s;
+        cv = parseInt(a*4);
+        s = parseInt(a*a);
+        let displayA = document.getElementById("dispalyA")
+        displayA.innerHTML = "Dien tich hinh vuong la :"+ s+" chu vi hinh vuong la :" +cv
+    }
+    function  cauB(){
+        let a = parseInt(document.getElementById("valueA_b").value);
+        let b= parseInt(document.getElementById("valueB_b").value);
+        let kq1;
+        kq1= parseInt(Math.pow(a,2))
+        let kq2;
+        kq2 =parseInt(Math.pow(a,b));
+        let displayB = document.getElementById("displayB");
+        displayB.innerHTML = "a^2="+kq1+" a^b="+kq2;
+    }
+    function cauC(){
+        let a = parseInt(document.getElementById("valueA_c").value);
+        let b= parseInt(document.getElementById("valueB_c").value);
+        let kq =0;
+        for(let i=a;i<=b;i++){
+            kq+=i;
+        }
+        document.getElementById("displayC").innerHTML ="Tong cac so tu a den b la :"+kq;
+    }
+    function cauD(){
+        let a = parseInt(document.getElementById("valueA_d").value);
+            let tk;
+            tk = parseInt((a/100)-1);
+            document.getElementById("dispalyD").innerHTML= "Nam"+a+"thuoc the ki "+tk;
+    }
+    function cauE() {
+         let a = parseInt(document.getElementById("valueA_e").value);
+         let b = parseInt(document.getElementById("valueA_e").value);
+         let c = parseInt(document.getElementById("valueA_e").value);
+         let dispalyE = document.getElementById("displayE")
+         if (a > 0 && b > 0 && c > 0) {
+              if (a + b > c && b + c > a && a + c > b) {
+                   dispalyE.innerHTML = " " + a + "," + b + "," + c + " tm la canh cua 1 tam giac"
+              }
+         }
+    }
+    function cauF(){
+              let a = parseInt(document.getElementById("valueA_f").value);
+              let b = parseInt(document.getElementById("valueA_f").value);
+              let c = parseInt(document.getElementById("valueA_f").value);
+              let dispalyF = document.getElementById("displayF")
+              if (a > 0 && b > 0 && c > 0) {
+                   if (a===b && a===c && b===c) {
+                        dispalyF.innerHTML = " " + a + "," + b + "," + c + " tm la canh cua 1 tam giac deu"
+                   }
+              }
+    }
+</script>
